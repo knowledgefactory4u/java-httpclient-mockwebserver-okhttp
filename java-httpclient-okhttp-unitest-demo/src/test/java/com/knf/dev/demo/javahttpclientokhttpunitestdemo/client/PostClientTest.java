@@ -51,4 +51,13 @@ public class PostClientTest {
 		assertEquals("1", result.get(0).userId());
 		
 	}
+	@After
+	public void aftertest() {
+		try {
+			mockWebServer.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
